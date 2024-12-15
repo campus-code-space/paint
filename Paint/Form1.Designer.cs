@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             panel1 = new Panel();
             panel2 = new Panel();
             pictureBox10 = new PictureBox();
@@ -40,6 +41,14 @@
             pictureBox3 = new PictureBox();
             pictureBox2 = new PictureBox();
             pictureBox1 = new PictureBox();
+            contextMenuStrip1 = new ContextMenuStrip(components);
+            menuStrip1 = new MenuStrip();
+            fileToolStripMenuItem = new ToolStripMenuItem();
+            newFIleToolStripMenuItem = new ToolStripMenuItem();
+            openImageToolStripMenuItem = new ToolStripMenuItem();
+            exitApplicationToolStripMenuItem = new ToolStripMenuItem();
+            imageToolStripMenuItem = new ToolStripMenuItem();
+            viewToolStripMenuItem = new ToolStripMenuItem();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox10).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox9).BeginInit();
@@ -51,6 +60,7 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
             // panel1
@@ -79,7 +89,7 @@
             panel2.Controls.Add(pictureBox3);
             panel2.Controls.Add(pictureBox2);
             panel2.Controls.Add(pictureBox1);
-            panel2.Location = new Point(738, 12);
+            panel2.Location = new Point(750, 27);
             panel2.Name = "panel2";
             panel2.Size = new Size(299, 103);
             panel2.TabIndex = 0;
@@ -184,13 +194,69 @@
             pictureBox1.TabStop = false;
             pictureBox1.Click += pictureBox6_Click;
             // 
+            // contextMenuStrip1
+            // 
+            contextMenuStrip1.ImageScalingSize = new Size(24, 24);
+            contextMenuStrip1.Name = "contextMenuStrip1";
+            contextMenuStrip1.Size = new Size(61, 4);
+            // 
+            // menuStrip1
+            // 
+            menuStrip1.ImageScalingSize = new Size(24, 24);
+            menuStrip1.Items.AddRange(new ToolStripItem[] { fileToolStripMenuItem, imageToolStripMenuItem, viewToolStripMenuItem });
+            menuStrip1.Location = new Point(0, 0);
+            menuStrip1.Name = "menuStrip1";
+            menuStrip1.Size = new Size(1049, 33);
+            menuStrip1.TabIndex = 2;
+            menuStrip1.Text = "menuStrip1";
+            // 
+            // fileToolStripMenuItem
+            // 
+            fileToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { newFIleToolStripMenuItem, openImageToolStripMenuItem, exitApplicationToolStripMenuItem });
+            fileToolStripMenuItem.Name = "fileToolStripMenuItem";
+            fileToolStripMenuItem.Size = new Size(54, 29);
+            fileToolStripMenuItem.Text = "File";
+            // 
+            // newFIleToolStripMenuItem
+            // 
+            newFIleToolStripMenuItem.Name = "newFIleToolStripMenuItem";
+            newFIleToolStripMenuItem.Size = new Size(270, 34);
+            newFIleToolStripMenuItem.Text = "New FIle";
+            // 
+            // openImageToolStripMenuItem
+            // 
+            openImageToolStripMenuItem.Name = "openImageToolStripMenuItem";
+            openImageToolStripMenuItem.Size = new Size(270, 34);
+            openImageToolStripMenuItem.Text = "Open Image";
+            openImageToolStripMenuItem.Click += openImageToolStripMenuItem_Click;
+            // 
+            // exitApplicationToolStripMenuItem
+            // 
+            exitApplicationToolStripMenuItem.Name = "exitApplicationToolStripMenuItem";
+            exitApplicationToolStripMenuItem.Size = new Size(270, 34);
+            exitApplicationToolStripMenuItem.Text = "Exit Application";
+            // 
+            // imageToolStripMenuItem
+            // 
+            imageToolStripMenuItem.Name = "imageToolStripMenuItem";
+            imageToolStripMenuItem.Size = new Size(58, 29);
+            imageToolStripMenuItem.Text = "Edit";
+            // 
+            // viewToolStripMenuItem
+            // 
+            viewToolStripMenuItem.Name = "viewToolStripMenuItem";
+            viewToolStripMenuItem.Size = new Size(65, 29);
+            viewToolStripMenuItem.Text = "View";
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1049, 450);
+            Controls.Add(menuStrip1);
             Controls.Add(panel2);
             Controls.Add(panel1);
+            MainMenuStrip = menuStrip1;
             Name = "Form1";
             Text = "Form1";
             panel2.ResumeLayout(false);
@@ -204,7 +270,10 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            menuStrip1.ResumeLayout(false);
+            menuStrip1.PerformLayout();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -221,5 +290,13 @@
         private PictureBox pictureBox7;
         private PictureBox pictureBox5;
         private PictureBox pictureBox6;
+        private ContextMenuStrip contextMenuStrip1;
+        private MenuStrip menuStrip1;
+        private ToolStripMenuItem fileToolStripMenuItem;
+        private ToolStripMenuItem imageToolStripMenuItem;
+        private ToolStripMenuItem viewToolStripMenuItem;
+        private ToolStripMenuItem newFIleToolStripMenuItem;
+        private ToolStripMenuItem openImageToolStripMenuItem;
+        private ToolStripMenuItem exitApplicationToolStripMenuItem;
     }
 }

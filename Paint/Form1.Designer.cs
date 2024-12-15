@@ -45,10 +45,15 @@
             menuStrip1 = new MenuStrip();
             fileToolStripMenuItem = new ToolStripMenuItem();
             newFIleToolStripMenuItem = new ToolStripMenuItem();
-            openImageToolStripMenuItem = new ToolStripMenuItem();
+            newCopyToolStripMenuItem = new ToolStripMenuItem();
+            newPasteToolStripMenuItem = new ToolStripMenuItem();
+            newCutToolStripMenuItem = new ToolStripMenuItem();
             exitApplicationToolStripMenuItem = new ToolStripMenuItem();
+            exitApplicationToolStripMenuItem1 = new ToolStripMenuItem();
             imageToolStripMenuItem = new ToolStripMenuItem();
             viewToolStripMenuItem = new ToolStripMenuItem();
+            editToolStripMenuItem = new ToolStripMenuItem();
+            viewToolStripMenuItem1 = new ToolStripMenuItem();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox10).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox9).BeginInit();
@@ -203,7 +208,7 @@
             // menuStrip1
             // 
             menuStrip1.ImageScalingSize = new Size(24, 24);
-            menuStrip1.Items.AddRange(new ToolStripItem[] { fileToolStripMenuItem, imageToolStripMenuItem, viewToolStripMenuItem });
+            menuStrip1.Items.AddRange(new ToolStripItem[] { fileToolStripMenuItem, editToolStripMenuItem, viewToolStripMenuItem1 });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
             menuStrip1.Size = new Size(1049, 33);
@@ -212,7 +217,7 @@
             // 
             // fileToolStripMenuItem
             // 
-            fileToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { newFIleToolStripMenuItem, openImageToolStripMenuItem, exitApplicationToolStripMenuItem });
+            fileToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { newFIleToolStripMenuItem, exitApplicationToolStripMenuItem, exitApplicationToolStripMenuItem1 });
             fileToolStripMenuItem.Name = "fileToolStripMenuItem";
             fileToolStripMenuItem.Size = new Size(54, 29);
             fileToolStripMenuItem.Text = "File";
@@ -222,19 +227,32 @@
             newFIleToolStripMenuItem.Name = "newFIleToolStripMenuItem";
             newFIleToolStripMenuItem.Size = new Size(270, 34);
             newFIleToolStripMenuItem.Text = "New FIle";
-            // 
-            // openImageToolStripMenuItem
-            // 
-            openImageToolStripMenuItem.Name = "openImageToolStripMenuItem";
-            openImageToolStripMenuItem.Size = new Size(270, 34);
-            openImageToolStripMenuItem.Text = "Open Image";
-            openImageToolStripMenuItem.Click += openImageToolStripMenuItem_Click;
+
+            newCopyToolStripMenuItem.Name = "newCopyToolStripMenuItem";
+            newCopyToolStripMenuItem.Size = new Size(270, 34);
+            newCopyToolStripMenuItem.Text = "Copy";
+
+            newPasteToolStripMenuItem.Name = "newPasteToolStripMenuItem";
+            newPasteToolStripMenuItem.Size = new Size(270, 34);
+            newPasteToolStripMenuItem.Text = "Paste";
+
+            newCutToolStripMenuItem.Name = "newCutToolStripMenuItem";
+            newCutToolStripMenuItem.Size = new Size(270, 34);
+            newCutToolStripMenuItem.Text = "Cut";
             // 
             // exitApplicationToolStripMenuItem
             // 
             exitApplicationToolStripMenuItem.Name = "exitApplicationToolStripMenuItem";
             exitApplicationToolStripMenuItem.Size = new Size(270, 34);
-            exitApplicationToolStripMenuItem.Text = "Exit Application";
+            exitApplicationToolStripMenuItem.Text = "Open Image";
+            exitApplicationToolStripMenuItem.Click += exitApplicationToolStripMenuItem_Click;
+            // 
+            // exitApplicationToolStripMenuItem1
+            // 
+            exitApplicationToolStripMenuItem1.Name = "exitApplicationToolStripMenuItem1";
+            exitApplicationToolStripMenuItem1.Size = new Size(270, 34);
+            exitApplicationToolStripMenuItem1.Text = "Exit Application";
+            exitApplicationToolStripMenuItem1.Click += exitApplicationToolStripMenuItem1_Click;
             // 
             // imageToolStripMenuItem
             // 
@@ -247,6 +265,19 @@
             viewToolStripMenuItem.Name = "viewToolStripMenuItem";
             viewToolStripMenuItem.Size = new Size(65, 29);
             viewToolStripMenuItem.Text = "View";
+            // 
+            // editToolStripMenuItem
+            // 
+            editToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] {  newCopyToolStripMenuItem, newPasteToolStripMenuItem, newCutToolStripMenuItem });
+            editToolStripMenuItem.Name = "editToolStripMenuItem";
+            editToolStripMenuItem.Size = new Size(58, 29);
+            editToolStripMenuItem.Text = "Edit";
+            // 
+            // viewToolStripMenuItem1
+            // 
+            viewToolStripMenuItem1.Name = "viewToolStripMenuItem1";
+            viewToolStripMenuItem1.Size = new Size(65, 29);
+            viewToolStripMenuItem1.Text = "View";
             // 
             // Form1
             // 
@@ -296,7 +327,13 @@
         private ToolStripMenuItem imageToolStripMenuItem;
         private ToolStripMenuItem viewToolStripMenuItem;
         private ToolStripMenuItem newFIleToolStripMenuItem;
-        private ToolStripMenuItem openImageToolStripMenuItem;
+        private ToolStripMenuItem newCopyToolStripMenuItem;
+        private ToolStripMenuItem newPasteToolStripMenuItem;
+        private ToolStripMenuItem newCutToolStripMenuItem;
+
         private ToolStripMenuItem exitApplicationToolStripMenuItem;
+        private ToolStripMenuItem exitApplicationToolStripMenuItem1;
+        private ToolStripMenuItem editToolStripMenuItem;
+        private ToolStripMenuItem viewToolStripMenuItem1;
     }
 }

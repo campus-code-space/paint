@@ -56,20 +56,30 @@ namespace Paint
 
         }
 
-        private void openImageToolStripMenuItem_Click(object sender, EventArgs e)
+
+
+        private void exitApplicationToolStripMenuItem_Click(object sender, EventArgs e)
         {
             OpenFileDialog ofd = new OpenFileDialog();
 
-            ofd.Filter = "Image Files|*.jpg;*.jpeg;*.png;*.bmp;*.gif";
+            ofd.Filter = ofd.Filter = "Image Files|*.jpg;*.jpeg;*.png;*.bmp;*.gif";
 
-            if (ofd.ShowDialog() == DialogResult.OK) {
-
+            if (ofd.ShowDialog() == DialogResult.OK)
+            {
                 panel1.BackgroundImage = Image.FromFile(ofd.FileName);
                 panel1.BackgroundImageLayout = ImageLayout.Stretch;
 
-
-
             }
+        }
+
+        private void openImageToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void exitApplicationToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

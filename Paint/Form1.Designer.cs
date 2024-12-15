@@ -45,15 +45,20 @@
             menuStrip1 = new MenuStrip();
             fileToolStripMenuItem = new ToolStripMenuItem();
             newFIleToolStripMenuItem = new ToolStripMenuItem();
+            exitApplicationToolStripMenuItem = new ToolStripMenuItem();
+            exitApplicationToolStripMenuItem1 = new ToolStripMenuItem();
+            editToolStripMenuItem = new ToolStripMenuItem();
             newCopyToolStripMenuItem = new ToolStripMenuItem();
             newPasteToolStripMenuItem = new ToolStripMenuItem();
             newCutToolStripMenuItem = new ToolStripMenuItem();
-            exitApplicationToolStripMenuItem = new ToolStripMenuItem();
-            exitApplicationToolStripMenuItem1 = new ToolStripMenuItem();
+            viewToolStripMenuItem1 = new ToolStripMenuItem();
             imageToolStripMenuItem = new ToolStripMenuItem();
             viewToolStripMenuItem = new ToolStripMenuItem();
-            editToolStripMenuItem = new ToolStripMenuItem();
-            viewToolStripMenuItem1 = new ToolStripMenuItem();
+            panel3 = new Panel();
+            button3 = new Button();
+            button2 = new Button();
+            button1 = new Button();
+            button4 = new Button();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox10).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox9).BeginInit();
@@ -66,6 +71,7 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             menuStrip1.SuspendLayout();
+            panel3.SuspendLayout();
             SuspendLayout();
             // 
             // panel1
@@ -73,9 +79,9 @@
             panel1.BackColor = Color.White;
             panel1.Cursor = Cursors.Cross;
             panel1.Dock = DockStyle.Bottom;
-            panel1.Location = new Point(0, 150);
+            panel1.Location = new Point(0, 141);
             panel1.Name = "panel1";
-            panel1.Size = new Size(1049, 300);
+            panel1.Size = new Size(1055, 399);
             panel1.TabIndex = 0;
             panel1.MouseDown += panel1_MouseDown;
             panel1.MouseMove += panel1_MouseMove;
@@ -211,7 +217,7 @@
             menuStrip1.Items.AddRange(new ToolStripItem[] { fileToolStripMenuItem, editToolStripMenuItem, viewToolStripMenuItem1 });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
-            menuStrip1.Size = new Size(1049, 33);
+            menuStrip1.Size = new Size(1055, 33);
             menuStrip1.TabIndex = 2;
             menuStrip1.Text = "menuStrip1";
             // 
@@ -225,34 +231,53 @@
             // newFIleToolStripMenuItem
             // 
             newFIleToolStripMenuItem.Name = "newFIleToolStripMenuItem";
-            newFIleToolStripMenuItem.Size = new Size(270, 34);
+            newFIleToolStripMenuItem.Size = new Size(236, 34);
             newFIleToolStripMenuItem.Text = "New FIle";
-
-            newCopyToolStripMenuItem.Name = "newCopyToolStripMenuItem";
-            newCopyToolStripMenuItem.Size = new Size(270, 34);
-            newCopyToolStripMenuItem.Text = "Copy";
-
-            newPasteToolStripMenuItem.Name = "newPasteToolStripMenuItem";
-            newPasteToolStripMenuItem.Size = new Size(270, 34);
-            newPasteToolStripMenuItem.Text = "Paste";
-
-            newCutToolStripMenuItem.Name = "newCutToolStripMenuItem";
-            newCutToolStripMenuItem.Size = new Size(270, 34);
-            newCutToolStripMenuItem.Text = "Cut";
             // 
             // exitApplicationToolStripMenuItem
             // 
             exitApplicationToolStripMenuItem.Name = "exitApplicationToolStripMenuItem";
-            exitApplicationToolStripMenuItem.Size = new Size(270, 34);
+            exitApplicationToolStripMenuItem.Size = new Size(236, 34);
             exitApplicationToolStripMenuItem.Text = "Open Image";
             exitApplicationToolStripMenuItem.Click += exitApplicationToolStripMenuItem_Click;
             // 
             // exitApplicationToolStripMenuItem1
             // 
             exitApplicationToolStripMenuItem1.Name = "exitApplicationToolStripMenuItem1";
-            exitApplicationToolStripMenuItem1.Size = new Size(270, 34);
+            exitApplicationToolStripMenuItem1.Size = new Size(236, 34);
             exitApplicationToolStripMenuItem1.Text = "Exit Application";
             exitApplicationToolStripMenuItem1.Click += exitApplicationToolStripMenuItem1_Click;
+            // 
+            // editToolStripMenuItem
+            // 
+            editToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { newCopyToolStripMenuItem, newPasteToolStripMenuItem, newCutToolStripMenuItem });
+            editToolStripMenuItem.Name = "editToolStripMenuItem";
+            editToolStripMenuItem.Size = new Size(58, 29);
+            editToolStripMenuItem.Text = "Edit";
+            // 
+            // newCopyToolStripMenuItem
+            // 
+            newCopyToolStripMenuItem.Name = "newCopyToolStripMenuItem";
+            newCopyToolStripMenuItem.Size = new Size(156, 34);
+            newCopyToolStripMenuItem.Text = "Copy";
+            // 
+            // newPasteToolStripMenuItem
+            // 
+            newPasteToolStripMenuItem.Name = "newPasteToolStripMenuItem";
+            newPasteToolStripMenuItem.Size = new Size(156, 34);
+            newPasteToolStripMenuItem.Text = "Paste";
+            // 
+            // newCutToolStripMenuItem
+            // 
+            newCutToolStripMenuItem.Name = "newCutToolStripMenuItem";
+            newCutToolStripMenuItem.Size = new Size(156, 34);
+            newCutToolStripMenuItem.Text = "Cut";
+            // 
+            // viewToolStripMenuItem1
+            // 
+            viewToolStripMenuItem1.Name = "viewToolStripMenuItem1";
+            viewToolStripMenuItem1.Size = new Size(65, 29);
+            viewToolStripMenuItem1.Text = "View";
             // 
             // imageToolStripMenuItem
             // 
@@ -266,29 +291,70 @@
             viewToolStripMenuItem.Size = new Size(65, 29);
             viewToolStripMenuItem.Text = "View";
             // 
-            // editToolStripMenuItem
+            // panel3
             // 
-            editToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] {  newCopyToolStripMenuItem, newPasteToolStripMenuItem, newCutToolStripMenuItem });
-            editToolStripMenuItem.Name = "editToolStripMenuItem";
-            editToolStripMenuItem.Size = new Size(58, 29);
-            editToolStripMenuItem.Text = "Edit";
+            panel3.BackColor = Color.FromArgb(128, 128, 255);
+            panel3.Controls.Add(button4);
+            panel3.Controls.Add(button3);
+            panel3.Controls.Add(button2);
+            panel3.Controls.Add(button1);
+            panel3.Location = new Point(293, 40);
+            panel3.Name = "panel3";
+            panel3.Size = new Size(454, 89);
+            panel3.TabIndex = 3;
             // 
-            // viewToolStripMenuItem1
+            // button3
             // 
-            viewToolStripMenuItem1.Name = "viewToolStripMenuItem1";
-            viewToolStripMenuItem1.Size = new Size(65, 29);
-            viewToolStripMenuItem1.Text = "View";
+            button3.Location = new Point(236, 22);
+            button3.Name = "button3";
+            button3.Size = new Size(92, 34);
+            button3.TabIndex = 2;
+            button3.Text = "Line";
+            button3.UseVisualStyleBackColor = true;
+            button3.Click += button3_Click;
+            // 
+            // button2
+            // 
+            button2.Location = new Point(138, 22);
+            button2.Name = "button2";
+            button2.Size = new Size(92, 34);
+            button2.TabIndex = 1;
+            button2.Text = "Rectangle";
+            button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
+            // 
+            // button1
+            // 
+            button1.Location = new Point(21, 22);
+            button1.Name = "button1";
+            button1.Size = new Size(92, 34);
+            button1.TabIndex = 0;
+            button1.Text = "Circle";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
+            // 
+            // button4
+            // 
+            button4.Location = new Point(334, 22);
+            button4.Name = "button4";
+            button4.Size = new Size(92, 34);
+            button4.TabIndex = 3;
+            button4.Text = "Default";
+            button4.UseVisualStyleBackColor = true;
+            button4.Click += button4_Click;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1049, 450);
+            ClientSize = new Size(1055, 540);
+            Controls.Add(panel3);
             Controls.Add(menuStrip1);
             Controls.Add(panel2);
             Controls.Add(panel1);
             MainMenuStrip = menuStrip1;
             Name = "Form1";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Form1";
             panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox10).EndInit();
@@ -303,6 +369,7 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
+            panel3.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();
         }
@@ -335,5 +402,10 @@
         private ToolStripMenuItem exitApplicationToolStripMenuItem1;
         private ToolStripMenuItem editToolStripMenuItem;
         private ToolStripMenuItem viewToolStripMenuItem1;
+        private Panel panel3;
+        private Button button3;
+        private Button button2;
+        private Button button1;
+        private Button button4;
     }
 }
